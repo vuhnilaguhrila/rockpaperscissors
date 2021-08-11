@@ -75,32 +75,6 @@ function round() {
     return checkwinner(playerchoice, compchoice)
 }
 
-function fullGame() {
-    var playerWin = 0
-    var compWin = 0
-    var roundNumber = 0
-    while (roundNumber <= 5) {
-        result = round()
-        if (result == "win") {
-            playerWin += 1;
-            roundNumber += 1;
-            console.log(roundNumber);
-            console.log(playerWin);
-            if (playerWin >= 3) {
-                console.log("You Win!");
-                break;
-            }
-        }
-        else if (result == "lose") {
-            compWin += 1;
-            roundNumber += 1;
-            if (compWin >= 3) {
-                console.log("You Lose!");
-                break;
-            }
-        }
-    }
 
-}
 
-fullGame()
+round()
